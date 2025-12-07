@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apology for Rajlaxmi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: pink;
+      text-align: center;
+    }
+
+    /* First Page */
+    #page1 {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #page1 img {
+      width: 180px;
+    }
+
+    
+
+    #page1 button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #page1 button:hover {
+      background: #444;
+    }
+
+    /* Second Page */
+    #page2 {
+      display: none;
+      min-height: 100vh;
+      padding: 30px;
+      position: relative;
+      background: pink; /* Replace with your chemistry background */
+      background-size: cover;
+      background-repeat: repeat;
+    }
+
+    /* Mighty Raju hanging text */
+    #raju {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      animation: swing 2s infinite ease-in-out;
+    }
+
+    @keyframes swing {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Spanish Spoker Title */
+    #title {
+      font-size: 48px;
+      font-weight: 800;
+      margin-top: 50px;
+      animation: fadeIn 2s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Apology Text */
+    #contextMsg {
+      margin-top: 60px;
+      font-size: 26px;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    /* Reveal Button */
+    #revealBtn {
+      margin-top: 40px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #snapLink {
+      display: none;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  @media (max-width: 600px) {}
+      #title {
+        font-size: 32px;
+      }
+      #contextMsg {
+        font-size: 20px;
+        margin-top: 30px;
+      }
+      #raju {
+        font-size: 18px;
+      }
+      #page1 button, #revealBtn {
+        font-size: 16px;
+        padding: 10px 18px;
+      }
+      #page1 img {
+        width: 150px;
+      }
+
+      .topper-tag {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: #ff4081;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 10px 0 0 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: slideIn 1.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div id="page1">
+    
+    <button onclick="openPage2()">Click Me</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="page2">
+    <div id="raju">MIGHTY RAJU</div>
+
+    <div id="title">THE SPANISH SPOKER</div>
+
+    <div id="contextMsg">
+      SORRY RAJLAXMI,<br>
+      I know I behaved disrespectfully on Duolingo<br>
+      and maybe you will forgive me.<br>
+      I also working on another project<br>
+      Its surprise i will reveal soon..!<br>
+      -THE ENGINEER PRATIK
+    </div>
+
+    <button id="revealBtn" onclick="showSnap()">For upcoming news(click me)(optional🙂)</button>
+
+    <div id="snapLink">
+      <a href="https://www.snapchat.com/add/pratik-namade?share_id=ZXUz9071zkY&locale=en-GB" target="_blank">Click to open community</a>
+    </div>
+
+    <div class="topper-tag">🎓 Topper</div>
+  </div>
+
+  <script>
+    function openPage2() {
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+    }
+
+    function showSnap() {
+      document.getElementById('snapLink').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
